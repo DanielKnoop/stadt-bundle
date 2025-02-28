@@ -13,10 +13,9 @@
     },
     "autoload": {
         "psr-4": {
-            "Mapbender\\Monheim\\StadtBundle": "."
+            "Monheim\\StadtBundle": "/src/Monheim/StadtBundle"
         }
     },
-    "target-dir": "Mapbender/Monheim/StadtBundle",
     "extra": {
         "branch-alias": {
             "dev-main": "0.0.3-dev"
