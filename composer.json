@@ -8,7 +8,8 @@
         {"name": "Daniel Knoop"}
     ],
     "require": {
-        "php": ">=8.1.0"
+        "php": ">=8.1.0",
+        "mapbender/mapbender": "^4"
     },
     "autoload": {
   "psr-4": {"Mapbender\\Monheim\\StadtBundle": "."}
