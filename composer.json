@@ -12,7 +12,9 @@
         "mapbender/mapbender": "^4"
     },
     "autoload": {
-  "psr-4": {"Mapbender\\Monheim\\StadtBundle": "."}
+        "psr-4": {
+            "Mapbender\\Monheim\\StadtBundle": "."
+        }
     },
     "target-dir": "Mapbender/Monheim/StadtBundle",
     "extra": {
