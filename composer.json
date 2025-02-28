@@ -13,7 +13,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Monheim\\StadtBundle": "/src/Monheim/StadtBundle"
+            "DanielKnoop\\StadtBundle": "/src/Monheim/StadtBundle"
         }
     },
     "extra": {
