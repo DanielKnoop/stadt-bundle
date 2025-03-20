@@ -16,7 +16,6 @@
             "DanielKnoop\\StadtBundle\\": "."
         }
     },
-    "target-dir": "DanielKnoop/StadtBundle",
     "extra": {
         "branch-alias": {
             "dev-main": "0.0.4-dev"
