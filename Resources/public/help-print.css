@@ -1,0 +1,19 @@
+.navi{
+    display: none;
+}
+
+.wrapper{
+    left:0;
+    right: 0;
+    border: none;
+    overflow: visible;
+}
+.logo{
+    display: block;
+    position: relative;
+    margin-left: -10px !important;
+}
+
+h1.title{
+  display: none;
+}

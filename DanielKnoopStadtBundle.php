@@ -15,6 +15,13 @@ class DanielKnoopStadtBundle extends Bundle
         $configLocator = new FileLocator(__DIR__ . '/Resources/config');
         $loader = new XmlFileLoader($container, $configLocator);
         $loader->load('templates.xml');
+        $loader->load('controllers.xml');
         $container->addResource(new FileResource($configLocator->locate('templates.xml')));
+        $container->addResource(new FileResource($configLocator->locate('controllers.xml')));
     }
+    
+    public function getContainerExtension(): ?ExtensionInterface
+    {
+        return null;
+    }    
 }

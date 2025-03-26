@@ -1,0 +1,27 @@
+<h1>Legende</h1>
+<img class="steuertafel" style="float:left; margin-right: 20px;" src="{{ asset('bundles/mapbenderhelp/images/ebenenbaum.png') }}" alt="Steuertafel / Schaltfläche Legende" title="Steuertafel / Schaltfläche Legende"/>
+<p class="steuertafel">Die Legende l&auml;sst sich &uuml;ber eine Schaltfl&auml;che auf der Steuertafel &ouml;ffnen. Per Klick mit der linken Maustaste auf die Titelzeile wird diese aufgeklappt und n&auml;here Informationen bzw. Funktionen angezeigt.
+<br><br>
+In der Legende sind die einzelnen Dienste, die in der Karte zu finden sind, aufgelistet. Durch Klicken auf das Symbol in Form eines Auges <img src="{{ asset('bundles/mapbenderhelp/images/auge.png') }}">, wird der Dienst deaktiviert und bei erneutem Klicken wieder aktiviert. Ist der Dienst aktiv, wird er in der Karte dargestellt und die dazugeh&ouml;rige Legende ist ausgeklappt. Einen deaktivierten Dienst kann man daran erkennen, dass das Symbol durchgestrichen dargestellt wird <img src="{{ asset('bundles/mapbenderhelp/images/auge_aus.png') }}">.
+
+Die Dienste Verkehrsweg, Schallschutzwand und Ballungsraum k&ouml;nnen gleichzeitig ausgew&auml;hlt und angezeigt werden.
+Zur Aktivierung bzw. Deaktivierung der L&auml;rmindexe und der Hintergrundkarte kann jeweils nur ein Dienst zur gleichen Zeit ausgew&auml;hlt werden. Diese Auswahl kann mit Hilfe der Kreissymbole <img src="{{ asset('bundles/mapbenderhelp/images/kreis.png') }}"> get&auml;tigt werden.<br><br>
+F&uuml;r die Hintergrundkarte kann zwischen dem BKG Webatlas und den BKG Orthofotos gew&auml;hlt werden.<br><br>
+Der Info-Button <img src="{{ asset('bundles/mapbenderhelp/images/info_meta.png') }}">, der hinter jedem aufgelisteten Dienst erscheint, gibt bei Klick mit der linken Maustaste Informationen &uuml;ber die Metadaten des jeweiligen Dienstes.<br><br>
+Das Sternf&ouml;rmige Symbol <img src="{{ asset('bundles/mapbenderhelp/images/stern.png') }}"> erm&ouml;glicht es, die Transparenz der Dienste zu verstellen.  <br><br>
+<img src="{{ asset('bundles/mapbenderhelp/images/transparenz.png') }}" title="Transparenz Fenster" alt="Transparenz Fenster" />
+<br><br>
+Es werden nicht auf jeder Zoomstufe alle vorhandenen Objekte in der Legende angezeigt, um sie &uuml;bersichtlicher zu gestalten. Die Legende passt sich daher dynamisch an, wenn der Kartenausschnitt durch den Benutzer vergr&ouml;&szlig;ert oder verkleinert wird. Die Legende &auml;ndert sich auch, wenn eine andere Karte ausgew&auml;hlt wird.
+Die einzelnen Dienste werden ab folgenden Ma&szlig;st&auml;ben dargestellt:
+<ul class="steuertafel" style="margin-left: 0px; padding-left: 20px; display: block; position: relative">
+    <li >Verkehrsweg: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;keine Ma&szlig;stabsgrenzen,
+        Segmentbegrenzungen &ge; 1:50.000
+    </li>
+    <li>Schallschutzwand: &nbsp; &ge; 1:100.000</li>
+    <li>Ballungsraum: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; keine Ma&szlig;stabsbegrenzung</li>
+
+    <li>L&auml;rmindex: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &ge; 1:100.000
+    </li>
+    <li>Hintergrundkarte: &nbsp;&nbsp;&nbsp;&nbsp; keine Ma&szlig;stabsbegrenzung</li>
+    <ul>
+</p>

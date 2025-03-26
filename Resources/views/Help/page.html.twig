@@ -1,0 +1,18 @@
+{% extends '@DanielKnoopStadtBundle/Resources/views/index.html.twig' %}
+
+{% block title %}{{ title|raw }}{% endblock %}
+
+{% block favicon %}{{ asset('favicon.png') }}{% endblock %}
+
+{% block body %}
+    <div class="header">
+        <img class="logo" style="cursor:pointer;margin-bottom:10px; margin-top: 10px; display:block; margin-left: 10px; margin-right: 72px;" src="https://geoportal.monheim.de/mapbender/bundles/monheimstadt/image/Logo_monheim.jpg" alt="Documentation" onclick="javascript:window.open('https://www.monheim.de/')" height="150px" align="left">
+        <h1 class="title" style="padding-top:36px">Hinweise zur Nutzung</h1>
+    </div>
+    {% include '@DanielKnoopStadtBundle/Resources/views/Help/navigation.html.twig' %}
+    <div class="wrapper">
+        <div class="content">
+            {% include '@DanielKnoopStadtBundle/Resources/views/Pages/' ~ page ~ '.html.twig' %}
+        </div>
+    </div>
+{% endblock %}

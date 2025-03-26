@@ -1,0 +1,246 @@
+@import "libs/mixins";
+@import "libs/variables";
+@import "libs/icons";
+@import "theme/mapbender3";
+
+$fontSize: 14px;
+$lineHeight: 21px;
+$textColor: lighten(#0098DB, 90%); 
+$textColorDark: #0098DB;
+$border: #A8E5FF; 
+$backGroundColor: rgba(0, 152, 219, 0.1);
+$toolbarActiveItemColor: #077AAC; 
+$toolBarBackgroundColor: rgba(0, 152, 219, 0.9);
+$toolBarFontColor: white;
+$buttonBgColorBlue:  #0098DB; 
+$buttonBgColor:  #077AAC; 
+$buttonBorderColor: #0A1F33;
+$buttonCriticalBgColor: #0098DB;
+$buttonActiveBgColor: darken($buttonBgColor, 15%);
+$buttonHoverBgColor: lighten($buttonActiveBgColor, 10%);
+$buttonShadowColor: opacify($buttonActiveBgColor, 0.2);
+$borderColor: lighten($border, 30%);
+
+$headerColor: rgba(7, 122, 172, 0.9); 
+$headerTextColor: #FFFFFF;
+$backgroundColorLighten: #EBEBEB;  
+
+$color_wild_sand_approx: #f5f5f5;
+$color_gunsmoke_approx: #858585;
+$color_alabaster_approx: #f9f9f9;
+
+$contentColor: #EBEBEB;
+
+
+html {
+  background: none;
+}
+
+body {
+  background: $backGroundColor none;
+  font-family: Calluna Sans, Gill Sans, Calibri, Trebuchet MS, sans-serif;
+  font-size: $fontSize;
+  line-height: $lineHeight;
+
+  > span[role="status"] {
+    display: none;
+  }
+
+  .header {
+    top: 0px;
+    color: $headerTextColor;
+    background-color: $headerColor;
+    border-bottom: solid 2px $borderColor;
+    height: 35px;
+    text-align: right;
+    font-size: $fontSize;
+    padding-right: 10px;
+	position: absolute;
+	width: 100%;
+	z-index: 10;
+  }
+  
+  .geo-title {
+    float:left; 
+    font-size: 21px; 
+    margin-left: 30px;
+    margin-top: 5px;
+    //color: lighten(#0098DB, 40%); 
+   }
+   
+  .logoContainer {
+    background-color: white;
+    display: inline-block;
+    margin-left: 20px;
+    position: relative;
+    float:left; 
+    width: 110px;
+    z-index: 10;
+    padding: 0;
+   } 
+   
+ .toolBar .mb-button {
+  	border-radius: 6px;
+  	opacity: 0.7;
+  	color: white;
+   }
+   .toolBar .mb-button.toolBarItemActive {
+  opacity: 1;
+  background: white;
+  color: rgba(0,152,219,0.9);
+}
+.mb-element-zoombar .toolPane {
+  display: inline-block;
+  padding: 5px;
+  border-radius: 3px;
+  background: rgba(0,152,219,0.9);
+  color: white;
+}
+	.toolBar.top {
+		background: $backGroundColor;
+	}   	
+   
+	.map-overlay {
+		position: fixed;
+		top: 35px;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 1;
+		display: flex;
+	}  
+	
+	.sidePane {
+	  &:after {
+		clear: both;
+	  }
+	background: #EBEBEB !important;
+	color: $toolBarFontColor;
+	color: #077AAC;
+	position: absolute;
+	top: 36px;
+	bottom: 166px;
+	height: auto;
+
+	}
+
+	.map-overlay .map-overlay-column div.sidePane{
+		width: 360px;
+	}
+
+	.map-overlay .map-overlay-column div.toolBar {
+		background-color: rgba(0,152,219,0.9);
+	}
+
+	.tabContainerAlt>.tabs {
+		font-size: 0.9em;
+	}
+
+	.sidePane .sideContent {
+		width: 100%
+	}
+	
+	.flex-fill {
+		flex-grow: 1;
+		display: flex;
+		flex-flow: row;
+	}
+
+	.sidePane.flex-fill.closed {
+		left: -324px !important;
+	}
+	
+	.tabContainer .tab {
+		color: #077AAC;
+	}
+	
+	.popupHead .popupTitle {
+		color: #077AAC;
+	}
+	
+	.tabContainerAlt .tab.active {
+		color: white;
+		background: $toolbarActiveItemColor;
+	}
+	
+	.tabContainerAlt .tab:hover.active {
+		background: $toolbarActiveItemColor;
+	}	
+	
+	.tabContainerAlt .tab {
+		color: white;
+		background: $buttonBgColorBlue;
+	}
+	
+	.tabContainerAlt .tab:hover {
+		background: $toolbarActiveItemColor;
+	}		
+	
+	.button.critical {
+		color: white;
+		background: $buttonBgColorBlue;
+		border-color: $buttonBgColorBlue;
+	}
+	
+	.button:hover.critical {
+		color: white;
+		background: $buttonBgColorBlue;
+		border-color: $buttonBgColorBlue;
+	}	
+	
+	.button {
+		color: white;
+		background: $toolbarActiveItemColor;
+	}
+	
+	.button:hover {
+		color: white;
+		background: $toolbarActiveItemColor;
+	}
+	
+	.anchored-element-wrap-lb .element-wrapper {
+		width: fit-content;
+	}
+	
+	.anchored-element-wrap.anchored-element-wrap-lb {
+		left: 20px;
+		text-align: left;
+	}
+	
+	.mb-element-basesourceswitcher.toolBarItem .basesourcegroup[data-state="active"] {
+		background: $backGroundColor;
+		border-color: white;
+		border-radius: 3px;
+		color: white;		
+	}
+	
+	.mb-element-basesourceswitcher.toolBarItem .basesourcesetswitch:hover {
+		color: white;
+		background-color: $toolbarActiveItemColor;
+	}	
+	
+    .mb-element-basesourceswitcher li:hover, .mb-element-basesourceswitcher .basesourcegroup[data-state="active"] {
+        background-color: #0098db;
+        color: #fff;
+		border-color: rgba(7, 122, 172, 0.9);
+    }
+
+	.mb-element-basesourceswitcher.toolBarItem .basesourcesetswitch {
+        background: #077aac none repeat scroll 0 0;
+        border-color: #a8e5ff;
+        color: #fff;
+
+    }
+	.mb-element-basesourceswitcher.toolBarItem .basesourcesetswitch[data-state="active"] {
+		color: white;
+		background-color: #0098db;
+	}
+	
+    .mb-element-basesourceswitcher li:hover {
+        background-color: #077AAC;
+        color: #fff;
+
+    } 
+	
+}
+

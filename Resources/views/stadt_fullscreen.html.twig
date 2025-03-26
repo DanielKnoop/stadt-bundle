@@ -1,0 +1,46 @@
+{% extends "@MapbenderCore/frontend.html.twig" %}
+
+{% block title %}{{ application.title }} - Stadt Monheim am Rhein{% endblock %}
+
+{% block favicon %}{{ asset('bundles/stadtbundle/image/favicon.png') }}{% endblock %}
+
+
+{% block frontend_content %}
+
+    <div class="header">
+      <img class="logoContainer" alt="Stadt Monheim am Rhein" src="{{ asset('bundles/stadtbundle/image/Logo_monheim.jpg') }}" />
+<span class="geo-title">Geoportal Stadt Monheim am Rhein</span> 
+ <a href="{{ asset('user/login') }}" style="color: #fff; vertical-align: 5px"> </a> 
+ <a href="https://www.monheim.de/" target="_blank" style="color: #fff;">Startseite</a> 
+| <a href="{{ asset('user/login') }}" style="color: #fff;">Login</a>
+| <a href="{{ asset('bundles/stadtbundle/feedback.html') }}" target="_blank" style="color: #fff;">Kontakt</a> 
+| <a href="
+https://www.monheim.de/rathaus/impressum/" target="_blank" style="color: #fff;">Impressum</a>
+| <a href="
+https://geoportal.monheim.de/mapbender/help/" target="_blank" style="color: #fff;">Hilfe</a>
+    </div>
+
+  <div id="templateWrapper" class="templateWrapper">
+    <div id="content" class="contentPane">
+      {{ map_markup(application) | raw }}
+      {{ unanchored_content_elements(application) | raw }}
+    </div>
+    <div class="map-overlay">
+      <div class="map-overlay-column">
+        {{ region_markup(application, 'toolbar', false) | raw }}
+        <div class="overlay-fill">
+          <div class="anchored-element-wrap anchored-element-wrap-lt">{{ anchored_content_elements(application, 'left-top') | raw }}</div>
+          <div class="anchored-element-wrap anchored-element-wrap-rt">{{ anchored_content_elements(application, 'right-top') | raw }}</div>
+          <div class="anchored-element-wrap anchored-element-wrap-lb">{{ anchored_content_elements(application, 'left-bottom') | raw }}</div>
+          <div class="anchored-element-wrap anchored-element-wrap-rb">{{ anchored_content_elements(application, 'right-bottom') | raw }}</div>
+
+          {{ region_markup(application, 'sidepane', true) | raw }}
+        </div>
+        {{ region_markup(application, 'footer', true) | raw }}
+      </div>
+    </div>
+  </div>
+
+
+{% endblock %}
+

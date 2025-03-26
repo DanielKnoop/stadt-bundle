@@ -1,0 +1,34 @@
+{% set title = "Benutzeroberfläche" %}
+<h1>Benutzeroberfl&auml;che</h1>
+<p>Die Benutzeroberfl&auml;che besteht haupts&auml;chlich aus dem
+<a  href="{{ path('mapbender_help_category', {'category': 'benutzeroberflaeche', 'page': 'Kartenfenster'}) }}">Kartenfenster</a>
+, in welchem der aktuelle Kartenausschnitt angezeigt wird. <br>
+Im Kartenfenster findet sich links unten ein Fenster mit einer
+<a  href="{{ path('mapbender_help_subcategory', {'category': 'benutzeroberflaeche', 'subcategory': 'kartenfenster', 'page': 'Übersichtskarte'}) }}">&Uuml;bersichtskarte</a>
+, welche die Position des aktuellen Kartenausschnitts in der Gesamtansicht anzeigt. <br> Hinzu kommt eine
+<a  href="{{ path('mapbender_help_subcategory', {'category': 'benutzeroberflaeche', 'subcategory': 'kartenfenster', 'page': 'Kartennavigation'}) }}">Navigationsleiste</a>
+
+, die den Wechsel zwischen verschiedenen Zoomstufen erm&ouml;glicht und sich im rechten Bereich des Kartenfensters befindet.</p> 
+<br>
+<img class="bildschirm" alt="{{ title }}" title="{{ title }}" src="{{ asset('bundles/stadtbundle/image/benutzeroberflaeche.png') }}"/>
+<p>
+<br> Oben an das Kartenfenster angrenzend befindet sich eine Leiste, auf der 
+
+<a  href="{{ path('mapbender_help_category', {'category': 'benutzeroberflaeche', 'page': 'Werkzeugleiste'}) }}">Werkzeuge</a>
+
+ mit verschiedenen Funktionen, wie der Erstellung von 
+
+<a href="{{ path('mapbender_help_subcategory', {'category': 'benutzeroberflaeche', 'subcategory': 'werkzeugleiste', 'page': 'rechteckpolygonundpunkt'}) }}">Polygonen</a>
+
+ und verschiedene 
+
+ <a href="{{ path('mapbender_help_subcategory', {'category': 'benutzeroberflaeche', 'subcategory': 'werkzeugleiste', 'page': 'flaecheliniemessen'}) }}">Messinstrumente</a>. 
+<br> Unten rechts in der
+
+<a  href="{{ path('mapbender_help_category', {'category': 'benutzeroberflaeche', 'subcategory': 'fussleiste', 'page': 'Fußleiste'}) }}">Fußleiste</a>
+ des Kartenviewers ist eine
+<a  href="{{ path('mapbender_help_subcategory', {'category': 'benutzeroberflaeche', 'subcategory': 'fussleiste', 'page': 'Koordinatenanzeige'}) }}">Koordinatenanzeige</a>
+ zu sehen, welche die aktuelle geographische Position des Mauszeigers im Kartenbild anzeigt und sich somit je nach Bewegung des Mauszeigers &auml;ndert.<br>
+Im linken Bereich der Benutzeroberfl&auml;che findet man die
+<a  href="{{ path('mapbender_help_category', {'category': 'benutzeroberflaeche', 'page': 'Steuertafel'}) }}">Steuertafel</a>. Hier&uuml;ber kann man zu den OGC-Diensten gelangen und diese individuell an- und ausschalten.
+</p>

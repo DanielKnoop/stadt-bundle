@@ -1,0 +1,20 @@
+{% set title = "Kartenfenster" %}
+{% set titleOn = title ~ " aufgeklappt" %}
+{% set titleOff = title ~ " zugeklappt" %}
+<h1>Kartenfenster</h1>
+<p>Das Kartenfenster ist das zentrale Element der Benutzeroberfl&auml;che und befindet sich im Hintergrund. Es dient zur Anzeige der Karte. <br><br>
+<img class="bildschirm" src="{{ asset('bundles/stadtbundle/image/kartenfenster.png') }}" alt="{{ titleOn }}" title="{{ titleOn }}"/>
+
+<p> Das Ausblenden der <a  href="{{ path('mapbender_help_category', {'category': 'benutzeroberflaeche', 'page': 'Steuertafel'}) }}">Steuertafel</a> und der <a href="{{ path('mapbender_help_subcategory', {'category': 'benutzeroberflaeche', 'subcategory': 'kartenfenster', 'page': 'Übersichtskarte'}) }}">Übersichtskarte</a> erfolgt per Klick auf das sich rechts an den jeweiligen Elementen befindliche Minus-Symbol. <br>Hierdurch kann die Ansicht des Kartenfensters vergr&ouml;&szlig;ert werden. Erneut aufgeklappt werden diese durch einen Klick auf das Plus-Symbol.</p>
+
+<img class="bildschirm" src="{{ asset('bundles/stadtbundle/image/kartenfenster_gross.png') }}" alt="{{ titleOff }}" title="{{ titleOff }}"/>
+
+<p>Im rechten Bereich des Kartenfensters befindet sich eine 
+
+<a href="{{ path('mapbender_help_subcategory', {'category': 'benutzeroberflaeche', 'subcategory': 'kartenfenster', 'page': 'Kartennavigation'}) }}">Navigationsleiste</a>,
+
+die den Wechsel zwischen verschiedenen Zoomstufen erm&ouml;glicht, links unten ein Fenster mit der
+
+<a href="{{ path('mapbender_help_subcategory', {'category': 'benutzeroberflaeche', 'subcategory': 'kartenfenster', 'page': 'Übersichtskarte'}) }}">&Uuml;bersichtskarte</a>.
+<br>
+Diese Elemente erm&ouml;glichen eine erleichterte Steuerung innerhalb der Karte.</p>

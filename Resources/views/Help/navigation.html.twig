@@ -1,0 +1,48 @@
+{% if navigation is defined %}
+<div class="navi">
+    <ul class="naviul">
+        <li><hr></li>
+
+        {# CATEGORY #}
+        {% for nav_category, nav_subcategories in navigation %}
+        <li class="{% if category == nav_category|raw %}navi_bold{% else %}navi{% endif %}">
+            <a href="{{ path('mapbender_help_category', {'category': nav_category|raw, 'page': nav_category|raw}) }}">
+                {{ nav_category }}
+            </a>
+        </li>
+        <li><hr></li>
+
+        {# SUB-CATEGORY #}
+        {% if category == nav_category|raw %}
+        {% if nav_subcategories is not empty %}
+        {% for nav_subcategory, nav_pages in nav_subcategories %}
+        <li class="{% if page == nav_subcategory|raw %}navi_bold_40{% else %}navi_bo{% endif %}">
+            <a href="{{ path('mapbender_help_category', {'category': nav_category|raw, 'page': nav_subcategory|raw}) }}">
+                {{ nav_subcategory }}
+            </a>
+        </li>
+        <li><hr></li>
+
+        {# SUB-CATEGORY #}
+        {% if page == nav_subcategory|raw or subcategory == nav_subcategory|raw %}
+        {% if nav_pages is not empty %}
+        {% for nav_page, value in nav_pages %}
+        <li class="{% if page == nav_page|raw %}navi_kf_bold{% else %}navi_kf{% endif %}">
+            <a href="{{ path('mapbender_help_subcategory', {'category': nav_category|raw, 'subcategory': nav_subcategory|raw, 'page': nav_page|raw}) }}">
+                {{ nav_page }}
+            </a>
+        </li>
+        <li><hr></li>
+        {% endfor %}
+        {% endif %}
+        {% endif %}
+
+        {% endfor %}
+        {% endif %}
+        {% endif %}
+
+
+        {% endfor %}
+    </ul>
+</div>
+{% endif %}
